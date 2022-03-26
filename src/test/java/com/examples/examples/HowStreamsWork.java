@@ -1,8 +1,8 @@
-package com.amigoscode.examples;
+package com.examples.examples;
 
 
-import com.amigoscode.beans.Person;
-import com.amigoscode.mockdata.MockData;
+import com.examples.beans.Person;
+import com.examples.mockdata.MockData;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

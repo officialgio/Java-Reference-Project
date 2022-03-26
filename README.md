@@ -1,18 +1,17 @@
-# Java Streams API
-https://amigoscode.com/p/java-streams
-![cover](https://user-images.githubusercontent.com/40702606/137604079-5a73276f-a32a-4f03-adca-752f9a01adc2.png)
+# Functional Programming 
 
+![](../Screen Shot 2022-03-23 at 1.41.17 PM.png)
 # Course Description
-Functional programming is becoming very popular and it focuses around pure functions. Functional applications avoid the shared state, and tend to be more concise and predictable than those using object-oriented code. In this course Nelson will teach you how to move away from imperative to declarative programming allowing you to write less code and focus on what is important when build applications.
+Functional programming is becoming very popular and it focuses around pure functions. I will show you how to move away from imperative to declarative programming; this will allow you to write less code. The following excersizes should help you understand how functional programming is like by using Mock Data from JSON objects. You then could implement this functional style into your own projects. 
 
 ## List of topics for this course
-- What is functional programming
-- Stream API
+- Functional Programming
+- Lambdas
+- Data Structures (Arrays, List, Stack, HashMap)
+- Streams API
 - Transformations with Map
-- Reduce
-- Filter
-- Collectors
+- Reducinng
+- Filtering
+- Collecting
 - Statistics
 - Grouping
-- Parallel steams
-- Exercises

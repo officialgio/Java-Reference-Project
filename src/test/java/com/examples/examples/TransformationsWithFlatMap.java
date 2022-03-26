@@ -1,4 +1,4 @@
-package com.amigoscode.examples;
+package com.examples.examples;
 
 
 import org.junit.jupiter.api.BeforeEach;
@@ -17,7 +17,7 @@ public class TransformationsWithFlatMap {
             List.of("Susy", "Ali")
     );
 
-    @BeforeEach
+    @BeforeEach // this just means print before every test is executed
     void setUp() {
         System.out.println(arrayListOfNames);
     }
@@ -26,19 +26,44 @@ public class TransformationsWithFlatMap {
     public void withoutFlatMap() throws Exception {
         // [Mariam, Alex, Ismail, John, Alesha, Andre, Susy, Ali]
         List<String> names = new ArrayList<>();
+
+        // 1st method
+        arrayListOfNames.forEach(names::addAll);
+
+        //2nd method
+        for (List<String> strings : arrayListOfNames) {
+            names.addAll(strings);
+        }
+        System.out.println(names);
+
     }
 
     @Test
     public void withFlatMap() throws Exception {
         // [Mariam, Alex, Ismail, John, Alesha, Andre, Susy, Ali]
+        // Combine the List of Lists to one single List
+        List<String> names = arrayListOfNames.stream()
+                .flatMap(strings -> strings.stream())
+                .collect(Collectors.toList());
+        System.out.println(names);
+
+
     }
 
     @Test
     public void flatMapWithOptionals() {
         List<Optional<String>> optionals = List.of(
-                Optional.of("Amigos"),
-                Optional.of("Code")
+                Optional.of("Oh"),
+                Optional.of("Wow")
         );
+
+        // combine to a single list (optionals) \
+        List<String> list = optionals.stream()
+                .flatMap(s -> s.stream())
+                .collect(Collectors.toList());
+        System.out.println(list);
+
+
     }
 }
 
