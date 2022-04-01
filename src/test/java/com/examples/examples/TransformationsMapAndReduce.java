@@ -12,6 +12,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -33,6 +34,7 @@ public class TransformationsMapAndReduce {
         //assertThat(people.size()).isEqualTo(dtos.size()); (check same size to get same list transformed)
         dtos.forEach(System.out::println);
     }
+
 
     @Test
     void PracticeTransformationWithMap() throws IOException {
@@ -67,6 +69,16 @@ public class TransformationsMapAndReduce {
         maleOnly.forEach(System.out::println);
 
 
+    }
+
+    @Test
+    public void getFirstName() throws IOException {
+        // What if you want get the first names?
+        List<Person> people = MockData.getPeople();
+        List<String> collect = people.stream()
+                .map(person -> person.getFirstName())
+                .collect(Collectors.toList());
+        collect.forEach(System.out::println);
     }
 
 

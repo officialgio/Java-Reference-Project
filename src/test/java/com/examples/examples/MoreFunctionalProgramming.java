@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class MoreFunctionalProgramming {
     @Test
     public void introToFunctionalProgramming() throws IOException {
@@ -61,6 +63,17 @@ public class MoreFunctionalProgramming {
         System.out.println("Male count: " + maleCount);
 
 
+    }
+
+    @Test
+    public void usingReduce() throws IOException {
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6);
+
+        Integer reduce = numbers.stream()
+                .reduce(0, (a, b) -> Integer.sum(a, b));
+        assertThat(reduce).isEqualTo(21);
+
+        System.out.println(reduce);
     }
 
 }

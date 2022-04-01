@@ -4,10 +4,13 @@ package com.examples.examples;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class TransformationsWithFlatMap {
 
@@ -17,7 +20,8 @@ public class TransformationsWithFlatMap {
             List.of("Susy", "Ali")
     );
 
-    @BeforeEach // this just means print before every test is executed
+    @BeforeEach
+        // this just means print before every test is executed
     void setUp() {
         System.out.println(arrayListOfNames);
     }

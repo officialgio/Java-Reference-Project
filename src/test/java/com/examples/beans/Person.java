@@ -5,7 +5,6 @@ package com.examples.beans;
  * It's ideal to have your data fields private and final so that they won't be accessed
  * You can have many constructors of your own.
  * In this case we only have getters because we're only retrieving data and not setting our own manually
- *
  */
 
 public class Person {

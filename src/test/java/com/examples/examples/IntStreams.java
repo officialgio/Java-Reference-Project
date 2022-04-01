@@ -13,7 +13,7 @@ public class IntStreams {
 
     @Test
     public void range() throws Exception {
-        System.out.println("with fori");
+        System.out.println("with for loop");
         for (int i = 0; i <= 10; i++) {
             System.out.println(i);
         }
@@ -30,7 +30,6 @@ public class IntStreams {
 
         System.out.println("print array ");
         Arrays.stream(arr).forEach(s -> System.out.println(s));
-//       Arrays.stream(arr).forEach(System.out::println);
 
 
     }
