@@ -84,7 +84,6 @@ public class MoreFunctionalProgramming {
         // parse strings to integers and return a new list of integers
         // that are less than 10
         List<String> str = List.of("1", "2", "10");
-
         List<Integer> collect = str.stream()
                 .map(value -> Integer.parseInt(value))
                 .filter(value -> value < 10).collect(Collectors.toList());
