@@ -5,9 +5,12 @@ import org.junit.jupiter.api.Test;
 import com.examples.mockdata.MockData;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -76,4 +79,17 @@ public class MoreFunctionalProgramming {
         System.out.println(reduce);
     }
 
+    @Test
+    public void ParsingStrings() throws IOException {
+        // parse strings to integers and return a new list of integers
+        // that are less than 10
+        List<String> str = List.of("1", "2", "10");
+
+        List<Integer> collect = str.stream()
+                .map(value -> Integer.parseInt(value))
+                .filter(value -> value < 10).collect(Collectors.toList());
+        collect.forEach(System.out::println);
+
+
+    }
 }
